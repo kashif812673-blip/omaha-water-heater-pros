@@ -1,0 +1,152 @@
+/* Omaha Water Heater Pros — Bugfree v3 design language
+   Forest green #033F2D + lime #C7F268 · Inter Tight · static, no frameworks */
+:root{
+  --green:#033F2D; --green-deep:#022A1F; --lime:#C7F268; --lime-soft:#E4F9B8;
+  --ink:#10231B; --muted:#4A5A52; --paper:#FFFFFF; --canvas:#F4F7F2;
+  --radius:22px; --radius-sm:14px;
+  --shadow:0 18px 50px rgba(3,63,45,.14);
+  --font:"Inter Tight",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--canvas);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ---------- floating glass header ---------- */
+.site-header{position:fixed;top:14px;left:0;right:0;z-index:100;pointer-events:none}
+.header-inner{pointer-events:auto;max-width:1180px;margin:0 auto;padding:10px 18px;
+  background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(3,63,45,.1);border-radius:999px;box-shadow:0 10px 34px rgba(3,63,45,.12);
+  display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--green);font-size:18px;white-space:nowrap}
+.brand img{width:38px;height:38px;border-radius:12px}
+.main-nav{display:flex;gap:4px;margin-left:auto;align-items:center}
+.main-nav a{padding:9px 13px;border-radius:999px;font-weight:600;font-size:15px;color:var(--ink);white-space:nowrap}
+.main-nav a:hover{background:var(--lime-soft);text-decoration:none;color:var(--green)}
+.nav-cta{background:var(--lime)!important;color:var(--green)!important;font-weight:700!important;box-shadow:0 6px 18px rgba(199,242,104,.5)}
+.nav-cta:hover{background:var(--green)!important;color:#fff!important}
+.nav-toggle{display:none;background:none;border:0;font-size:26px;color:var(--green);cursor:pointer;margin-left:auto}
+
+/* ---------- hero ---------- */
+.hero{background:var(--green);color:#fff;border-radius:0 0 34px 34px;padding:130px 0 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,rgba(199,242,104,.22),transparent 70%)}
+.hero h1{font-size:clamp(30px,4.4vw,52px);line-height:1.12;font-weight:700;letter-spacing:-.5px;max-width:760px}
+.hero h1 .accent{color:var(--lime)}
+.hero-sub{margin-top:16px;max-width:680px;color:#DCE9E1;font-size:18px}
+.hero-ctas{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 32px;border-radius:999px;font-weight:700;font-size:16px;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-lime{background:var(--lime);color:var(--green);box-shadow:0 10px 26px rgba(199,242,104,.35)}
+.btn-lime:hover{background:#fff}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-deep)}
+
+/* ---------- trust strip ---------- */
+.trust-strip{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);margin:-30px auto 0;position:relative;z-index:5;
+  max-width:1060px;padding:18px 28px;display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;align-items:center}
+.trust-strip span{display:flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:var(--green)}
+.trust-strip .dot{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px var(--lime-soft)}
+
+/* ---------- rounded page canvas ---------- */
+.canvas{background:var(--paper);border-radius:34px;box-shadow:var(--shadow);margin:34px auto;max-width:1180px;padding:54px 56px}
+.canvas h2{font-size:clamp(24px,3vw,34px);color:var(--green);letter-spacing:-.4px;margin:44px 0 16px;line-height:1.25}
+.canvas h2:first-child{margin-top:0}
+.canvas h3{font-size:20px;color:var(--green);margin:26px 0 10px}
+.canvas p{margin:0 0 16px;color:#24352C}
+.canvas ul,.canvas ol{margin:0 0 18px 22px;color:#24352C}
+.canvas li{margin-bottom:8px}
+.canvas strong{color:var(--ink)}
+
+/* key takeaways */
+.takeaways{background:var(--lime-soft);border:2px solid var(--lime);border-radius:var(--radius);padding:26px 30px;margin:30px 0}
+.takeaways h2{margin:0 0 12px!important;font-size:22px!important}
+.takeaways ul{margin:0 0 0 20px}
+.takeaways li{margin-bottom:8px}
+
+/* service teaser cards */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:26px 0}
+.svc-card{background:var(--canvas);border:1px solid rgba(3,63,45,.1);border-radius:var(--radius-sm);padding:24px;transition:transform .15s ease,box-shadow .15s ease}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc-card h3{margin:0 0 8px;font-size:18px}
+.svc-card h3 a{color:var(--green)}
+.svc-card p{font-size:15px;color:var(--muted);margin:0}
+
+/* areas grid */
+.area-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:24px 0}
+.area-card{background:var(--green);color:#fff;border-radius:var(--radius-sm);padding:20px;font-weight:600}
+.area-card a{color:var(--lime);font-weight:700}
+.area-card small{display:block;color:#BCD2C6;font-weight:400;margin-top:4px}
+
+/* ---------- dark green dotted testimonial panel ---------- */
+.reviews-panel{background:var(--green-deep);border-radius:var(--radius);padding:48px;margin:44px 0;position:relative;overflow:hidden;
+  background-image:radial-gradient(rgba(199,242,104,.25) 1.5px,transparent 1.5px);background-size:26px 26px}
+.reviews-panel h2{color:#fff!important;margin:0 0 8px!important}
+.reviews-panel p.lead{color:#BCD2C6;margin-bottom:24px}
+.review-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.review-card{background:rgba(255,255,255,.96);border-radius:var(--radius-sm);padding:22px}
+.review-card .stars{color:#E8A30C;font-size:17px;letter-spacing:2px;margin-bottom:8px}
+.review-card p{font-size:15px;color:#24352C;margin:0 0 10px}
+.review-card cite{font-style:normal;font-weight:700;font-size:14px;color:var(--green)}
+
+/* ---------- FAQ accordion (open = lime) ---------- */
+.faq{border:1px solid rgba(3,63,45,.14);border-radius:var(--radius-sm);margin-bottom:12px;overflow:hidden;background:#fff}
+.faq-q{width:100%;text-align:left;background:#fff;border:0;padding:18px 22px;font-family:var(--font);font-size:17px;font-weight:600;color:var(--green);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q .plus{flex:none;width:30px;height:30px;border-radius:50%;background:var(--lime-soft);color:var(--green);font-size:20px;line-height:30px;text-align:center;transition:transform .2s}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease}
+.faq-a p{padding:0 22px 20px;color:#24352C;margin:0}
+.faq.open{background:var(--lime)}
+.faq.open .faq-q{background:var(--lime)}
+.faq.open .plus{transform:rotate(45deg);background:var(--green);color:#fff}
+
+/* ---------- final CTA band ---------- */
+.cta-band{background:var(--green);border-radius:var(--radius);padding:52px 40px;text-align:center;margin:44px 0;color:#fff;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;left:-70px;bottom:-70px;width:260px;height:260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(199,242,104,.2),transparent 70%)}
+.cta-band h2{color:#fff!important;margin:0 0 12px!important}
+.cta-band p{color:#DCE9E1;max-width:620px;margin:0 auto 26px}
+
+/* circular photo accents */
+.photo-ring{width:120px;height:120px;border-radius:50%;object-fit:cover;border:5px solid var(--lime);box-shadow:var(--shadow)}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--green-deep);color:#BCD2C6;margin-top:60px;padding:56px 0 30px;border-radius:34px 34px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:36px}
+.footer-brand{color:#fff;font-weight:700;font-size:19px;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand img{width:36px;height:36px;border-radius:10px}
+.site-footer h4{color:var(--lime);font-size:15px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.site-footer ul{list-style:none;margin:0}
+.site-footer li{margin-bottom:9px}
+.site-footer a{color:#BCD2C6;font-size:15px}
+.site-footer a:hover{color:var(--lime)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px}
+.footer-bottom a{color:#BCD2C6;margin-left:18px}
+
+/* floating call button (mobile) */
+.call-float{display:none;position:fixed;bottom:18px;right:18px;z-index:90;background:var(--lime);color:var(--green);
+  font-weight:700;padding:15px 24px;border-radius:999px;box-shadow:0 12px 30px rgba(3,63,45,.35);font-size:16px}
+
+/* breadcrumb */
+.crumbs{font-size:14px;color:var(--muted);margin:0 0 18px}
+.crumbs a{color:var(--green);font-weight:600}
+
+/* map placeholder */
+.map-embed{background:var(--canvas);border:2px dashed rgba(3,63,45,.25);border-radius:var(--radius-sm);padding:34px;text-align:center;color:var(--muted);margin:24px 0}
+
+/* responsive */
+@media(max-width:900px){
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .canvas{padding:34px 24px;margin:24px 12px}
+  .main-nav{position:fixed;top:74px;left:14px;right:14px;background:#fff;border-radius:20px;box-shadow:var(--shadow);
+    flex-direction:column;align-items:stretch;padding:14px;display:none}
+  .main-nav.open{display:flex}
+  .nav-toggle{display:block}
+  .call-float{display:block}
+  .trust-strip{margin:-30px 12px 0}
+}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}body{font-size:16px}}
