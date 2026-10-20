@@ -150,3 +150,23 @@ a:hover{text-decoration:underline}
   .trust-strip{margin:-30px 12px 0}
 }
 @media(max-width:560px){.footer-grid{grid-template-columns:1fr}body{font-size:16px}}
+
+/* ---------- design upgrade v2 ---------- */
+.hero-split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero-media{position:relative}
+.hero-media img{width:100%;height:auto;border-radius:26px;display:block;box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.hero-badge{position:absolute;left:-18px;bottom:22px;background:var(--lime);color:var(--green);
+  border-radius:16px;padding:12px 18px;box-shadow:0 12px 28px rgba(0,0,0,.28);line-height:1.25}
+.hero-badge strong{display:block;font-size:19px;font-weight:700;letter-spacing:-.3px}
+.hero-badge span{font-size:13px;font-weight:600;opacity:.85}
+@media(max-width:860px){.hero-split{grid-template-columns:1fr}.hero-badge{left:12px}}
+.svc-ico{width:52px;height:52px;border-radius:14px;background:#EAF7D8;color:var(--green);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.svc-ico svg{width:28px;height:28px}
+.svc-card{transition:transform .18s ease,box-shadow .18s ease}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(3,63,45,.13)}
+.canvas h2{position:relative;padding-top:6px}
+.canvas>h2::before,.canvas .takeaways h2::before{content:"";display:block;width:44px;height:5px;
+  border-radius:3px;background:var(--lime);margin-bottom:12px}
+.area-card{transition:transform .18s ease,box-shadow .18s ease}
+.area-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(3,63,45,.12)}
