@@ -208,3 +208,7 @@ a:hover{text-decoration:underline}
   .rv{opacity:1;transform:none;transition:none}
   .hero-text,.hero-media{animation:none}
 }
+
+/* referral footer note */
+.referral-note{font-size:13px;line-height:1.6;color:#B9D8C6;margin:18px 0 0;
+  padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
