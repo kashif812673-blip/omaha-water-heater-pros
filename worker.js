@@ -5,8 +5,8 @@ export default {
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
-    // Short alias: /terms/ -> /terms-of-service/
-    if (url.pathname === "/terms/") {
+    // Short alias: /terms and /terms/ -> /terms-of-service/
+    if (url.pathname === "/terms/" || url.pathname === "/terms") {
       return Response.redirect("https://omahawaterheaterpros.com/terms-of-service/", 301);
     }
     return env.ASSETS.fetch(request);
