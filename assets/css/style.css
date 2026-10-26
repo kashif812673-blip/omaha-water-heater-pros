@@ -212,3 +212,22 @@ a:hover{text-decoration:underline}
 /* referral footer note */
 .referral-note{font-size:13px;line-height:1.6;color:#B9D8C6;margin:18px 0 0;
   padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
+
+/* ---------- header dropdowns ---------- */
+.nav-drop{position:relative}
+.nav-drop-btn{background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:999px;font-weight:600;font-size:15px;color:var(--ink);font-family:inherit;white-space:nowrap}
+.nav-drop-btn:hover{background:var(--lime-soft);color:var(--green)}
+.nav-drop .drop-menu{display:none;position:absolute;top:calc(100% + 12px);left:0;min-width:280px;background:#fff;border:1px solid rgba(3,63,45,.1);border-radius:18px;box-shadow:var(--shadow);padding:10px;flex-direction:column;z-index:200}
+.nav-drop .drop-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+.nav-drop:hover .drop-menu,.nav-drop:focus-within .drop-menu,.nav-drop.open .drop-menu{display:flex}
+.drop-menu a{display:block;padding:10px 14px;border-radius:12px;font-weight:600;font-size:15px;color:var(--ink);white-space:normal;line-height:1.4}
+.drop-menu a:hover{background:var(--lime-soft);text-decoration:none;color:var(--green)}
+@media(max-width:900px){
+  .main-nav{max-height:calc(100vh - 90px);overflow-y:auto}
+  .nav-drop{width:100%}
+  .nav-drop-btn{width:100%;display:flex;justify-content:space-between;align-items:center}
+  .nav-drop:hover .drop-menu,.nav-drop:focus-within .drop-menu{display:none}
+  .nav-drop.open .drop-menu{display:flex}
+  .nav-drop .drop-menu{position:static;box-shadow:none;border:0;padding:2px 0 2px 14px;min-width:0}
+  .nav-drop .drop-menu::before{display:none}
+}
